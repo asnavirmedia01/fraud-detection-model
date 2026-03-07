@@ -3,7 +3,7 @@ import pandas as pd
 import joblib
 
 # Load model and scaler
-model = joblib.load("fraud_detection_model.pkl")
+model = joblib.load("random_forest_fraud_model.pkl")
 scaler = joblib.load("scaler.pkl")
 
 st.title("AI Fraud Detection System")
