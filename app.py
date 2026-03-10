@@ -87,18 +87,14 @@ def preprocess_input(
 
     return scaled
 
-
 # ----------------------------
 # Excel Export
 # ----------------------------
 def export_excel(dataframe):
     output = BytesIO()
-
     with pd.ExcelWriter(output, engine="xlsxwriter") as writer:
         dataframe.to_excel(writer, index=False, sheet_name="Fraud_Predictions")
-
     return output.getvalue()
-
 
 # ----------------------------
 # UI
@@ -116,13 +112,14 @@ st.subheader("Transaction Details")
 col1, col2 = st.columns(2)
 
 with col1:
-
+    # Transaction Amount with comma preview
     transaction_amount = st.number_input(
         "Transaction Amount",
         min_value=0.0,
         value=100000.0,
         step=1000.0
     )
+    st.write("Entered Amount: ₦", f"{transaction_amount:,.0f}")
 
     transaction_hour = st.slider("Transaction Hour", 0, 23, 12)
 
@@ -139,7 +136,6 @@ with col1:
     )
 
 with col2:
-
     location_change = st.selectbox(
         "Location Change",
         [0, 1],
@@ -152,12 +148,14 @@ with col2:
         format_func=lambda x: "Yes" if x else "No"
     )
 
+    # Average Transaction Last 30 Days with comma preview
     avg_transaction_last30days = st.number_input(
         "Average Transaction (Last 30 Days)",
         min_value=0.0,
         value=50000.0,
         step=500.0
     )
+    st.write("Formatted Average: ₦", f"{avg_transaction_last30days:,.0f}")
 
     amount_to_average_ratio = st.number_input(
         "Amount to Average Ratio",
@@ -171,12 +169,13 @@ st.subheader("User Information")
 col3, col4 = st.columns(2)
 
 with col3:
-
+    # User Income Estimate with comma preview
     user_income_estimate = st.number_input(
         "User Income Estimate",
         min_value=0.0,
         value=USER_INCOME_ESTIMATE_MEAN
     )
+    st.write("Formatted Income: ₦", f"{user_income_estimate:,.0f}")
 
     device_os = st.selectbox(
         "Device OS",
@@ -184,7 +183,6 @@ with col3:
     )
 
 with col4:
-
     customer_marital_status = st.selectbox(
         "Customer Marital Status",
         MARITAL_STATUS_OPTIONS
@@ -219,15 +217,21 @@ if st.button("Predict Fraud Risk"):
     else:
         st.success(f"✓ Legitimate Transaction (Risk: {probability:.2f})")
 
+    # Store formatted numbers for history
     formatted_amount = f"{transaction_amount:,.0f}"
+    formatted_avg = f"{avg_transaction_last30days:,.0f}"
+    formatted_income = f"{user_income_estimate:,.0f}"
 
     record = {
         "Transaction Amount": formatted_amount,
         "Hour": transaction_hour,
         "Velocity": transaction_velocity,
         "Account Age": account_age_days,
+        "Average Last30Days": formatted_avg,
+        "Amount to Avg Ratio": amount_to_average_ratio,
         "Device OS": device_os,
         "Marital Status": customer_marital_status,
+        "User Income Estimate": formatted_income,
         "Fraud Probability": probability,
         "Prediction": "Fraud" if prediction else "Legitimate"
     }
@@ -242,7 +246,6 @@ st.subheader("Prediction History")
 if len(st.session_state.history) > 0:
 
     history_df = pd.DataFrame(st.session_state.history)
-
     st.dataframe(history_df, use_container_width=True)
 
     excel = export_excel(history_df)
