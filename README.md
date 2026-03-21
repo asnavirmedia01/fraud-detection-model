@@ -20,10 +20,10 @@ This creates a need for an adaptive, intelligent system that can detect fraud dy
 
 This project implements a machine learning model that analyzes transaction-level data such as:
 
-Transaction amount
-User income estimate
-Average transaction behavior
-Device and usage patterns
+Transaction amount,
+User income estimate,
+Average transaction behavior,
+Device and usage patterns,
 
 The system assigns a fraud probability score and flags suspicious transactions for further review.
 
