@@ -1,4 +1,5 @@
-# fraud-detection-model
+#<img width="800" height="427" alt="resized_Screenshot 2026-03-21 060305" src="https://github.com/user-attachments/assets/49858fad-38a9-4cc0-9031-45cae0b1f146" />
+ fraud-detection-model
 Fraud Detection System for Nigerian Digital Payments
 🚀 Overview
 
