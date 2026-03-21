@@ -61,10 +61,11 @@ Class imbalance (fraud vs non-fraud)
 Feature relevance and scaling
 Risk of overfitting on synthetic or limited datasets
 Performance:
-Model achieved approximately 78% accuracy, indicating reasonable predictive capability but still leaving room for improvement in real-world deployment
-##IMAGE WITH A NEGATIVE RESULT BY THE TRAINED MODEL
+Model achieved approximately 78% accuracy, indicating reasonable predictive capability but still leaving room for improvement in real-world deployment.
+
+**IMAGE WITH A NEGATIVE RESULT BY THE TRAINED MODEL**
 <img width="1355" height="408" alt="1" src="https://github.com/user-attachments/assets/89310497-a031-405e-8314-810de0bfe59f" />
 
-##IMAGE WITH A POSITIVE RESULT BY THE RAINED MODEL
+**IMAGE WITH A POSITIVE RESULT BY THE RAINED MODEL**
 <img width="1346" height="371" alt="2" src="https://github.com/user-attachments/assets/132c5e11-a04d-4efd-99c5-aa68072b6e18" />
 
