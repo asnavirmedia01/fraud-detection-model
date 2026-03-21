@@ -78,8 +78,8 @@ Model achieved approximately 78% accuracy, indicating reasonable predictive capa
    _https://github.com/asnavirmedia01/fraud-detection-model.git_
    
 
-3. Navigate into the project directory:
+3. _Navigate into the project directory:_
    cd fraud-detection-model
 
-4. Install dependencies:
+4. _Install dependencies:_
    pip install -r requirements.txt
