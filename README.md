@@ -43,7 +43,8 @@ Clean and interactive Streamlit UI
 User input validation and formatting
 Export of prediction results to Excel
 Reset functionality for new transaction entries
-Background UI customization for better user experience
+Background UI customization for better user experience.
+
 🏗️ System Architecture
 
 The system is structured into three main components:
@@ -59,17 +60,25 @@ Handles feature preparation, encoding (e.g., device type), and formatting before
 
 📊 Model Details
 Algorithm Used: Random Forest Classifier
+
 Reason for Selection:
+
 Random Forest was chosen for its ability to:
-Handle non-linear relationships
-Reduce overfitting through ensemble learning
-Perform well on structured financial data
+Handle non-linear relationships,
+
+Reduce overfitting through ensemble learning,
+
+Perform well on structured financial data,
+
 Challenges Addressed:
 Class imbalance (fraud vs non-fraud)
+
 Feature relevance and scaling
+
 Risk of overfitting on synthetic or limited datasets
 Performance:
-Model achieved approximately 78% accuracy, indicating reasonable predictive capability but still leaving room for improvement in real-world deployment.
+
+Model achieved approximately 88% accuracy, indicating reasonable predictive capability but still leaving room for improvement in real-world deployment.
 
 **IMAGE WITH A NEGATIVE RESULT BY THE TRAINED MODEL**
 <img width="1355" height="408" alt="1" src="https://github.com/user-attachments/assets/89310497-a031-405e-8314-810de0bfe59f" />
