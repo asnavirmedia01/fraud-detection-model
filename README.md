@@ -6,16 +6,17 @@
 This project focuses on building and deploying a machine learning model to detect fraudulent transactions using a synthetic dataset. The goal is to identify suspicious activities accurately and efficiently, leveraging various transaction and user-related features.
 
 ## Table of Contents
-1.  [Introduction](##introduction)
-2.  [Dataset](#dataset)
-3.  [Methodology](#methodology)
-4.  [Models Used](#models-used)
-5.  [Performance](#performance)
-6.  [Feature Importance](#feature-importance)
-7.  [Streamlit Application](#streamlit-application)
-8.  [Installation and Usage](#installation-and-usage)
-9.  [Technologies Used](#technologies-used)
-10. [Conclusion](#conclusion)
+
+1. [Introduction](#1-introduction)
+2. [Dataset](#2-dataset)
+3. [Methodology](#3-methodology)
+4. [Models Used](#4-models-used)
+5. [Performance](#5-performance)
+6. [Feature Importance](#6-feature-importance)
+7. [Streamlit Application](#7-streamlit-application)
+8. [Installation and Usage](#8-installation-and-usage)
+9. [Technologies Used](#9-technologies-used)
+10. [Conclusion](#10-conclusion)
 
 ## 1. Introduction
 Financial fraud is a significant concern for institutions and individuals. This project aims to develop a robust fraud detection system capable of distinguishing between legitimate and fraudulent transactions. By analyzing patterns in historical transaction data, the model can flag potentially fraudulent activities in real-time or near real-time.
