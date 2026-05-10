@@ -6,7 +6,7 @@
 This project focuses on building and deploying a machine learning model to detect fraudulent transactions using a synthetic dataset. The goal is to identify suspicious activities accurately and efficiently, leveraging various transaction and user-related features.
 
 ## Table of Contents
-1.  [Introduction](#introduction)
+1.  [Introduction](##introduction)
 2.  [Dataset](#dataset)
 3.  [Methodology](#methodology)
 4.  [Models Used](#models-used)
